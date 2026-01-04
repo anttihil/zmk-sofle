@@ -54,13 +54,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_press>,
-                <&mkp MB3>,
+                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_press &mkp MB3>,
                 <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT &mkp MB3>;
+                <&macro_release &mkp MB3>,
+                <&macro_release &kp LEFT_SHIFT>;
 
             label = "SHIFT_MCLK";
         };
@@ -97,11 +95,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &PIPE   &MINUS  &SLASH  &UNDER  &TILDE    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &BSLH   &PLUS   &STAR   &EQUAL  &GRAVE    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp PIPE   &kp MINUS  &kp SLASH &kp UNDER  &kp TILDE    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp BSLH   &kp PLUS   &kp STAR  &kp EQUAL  &kp GRAVE    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "layer2";
@@ -110,11 +108,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &LBKT   &RBKT   &LT     &GT     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &LBRC   &RBRC   &LPAR   &RPAR   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LBKT  &kp RBKT  &kp LT    &kp GT    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LBRC  &kp RBRC  &kp LPAR  &kp RPAR  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "layer3";
