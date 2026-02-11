@@ -42,7 +42,7 @@
         hml: homerow_mod_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <200>;
