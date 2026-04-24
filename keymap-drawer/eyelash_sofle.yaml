@@ -15,30 +15,30 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
-  - {t: Q, h: <}
-  - {t: W, h: '>'}
-  - {t: E, h: '['}
-  - {t: R, h: ']'}
+  - {t: Q, h: <, s: Q}
+  - {t: W, h: '>', s: W}
+  - {t: E, h: '[', s: E}
+  - {t: R, h: ']', s: R}
   - T
   - $$mdi:arrow-down-bold$$
-  - {t: Y, h: '~'}
-  - {t: U, h: _}
-  - {t: I, h: +}
-  - {t: O, h: '*'}
-  - {t: P, h: '|'}
+  - {t: Y, h: '~', s: Y}
+  - {t: U, h: _, s: U}
+  - {t: I, h: +, s: I}
+  - {t: O, h: '*', s: O}
+  - {t: P, h: '|', s: P}
   - {t: '$$mdi:backspace-reverse-outline$$', h: navigation}
   - $$mdi:keyboard-esc$$
-  - {t: A, h: (}
-  - {t: S, h: )}
-  - {t: D, h: '{'}
-  - {t: F, h: '}'}
+  - {t: A, h: (, s: A}
+  - {t: S, h: ), s: S}
+  - {t: D, h: '{', s: D}
+  - {t: F, h: '}', s: F}
   - G
   - $$mdi:arrow-left-bold$$
-  - {t: H, h: '`'}
-  - {t: J, h: '='}
-  - {t: K, h: '-'}
-  - {t: L, h: /}
-  - {t: ;, h: \, s: ':'}
+  - {t: H, h: '`', s: H}
+  - {t: J, h: '=', s: J}
+  - {t: K, h: '-', s: K}
+  - {t: L, h: /, s: L}
+  - {t: ;, h: \, s: ;}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
   - Z
