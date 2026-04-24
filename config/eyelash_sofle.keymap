@@ -46,7 +46,35 @@
             require-prior-idle-ms = <150>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
-       };
+        };
+
+        #define ZMK_MORPH_KHT(NAME, HOLD, TAP) \
+            NAME: NAME { \
+                compatible = "zmk,behavior-mod-morph"; \
+                #binding-cells = <0>; \
+                bindings = <&kht HOLD TAP>, <&kp TAP>; \
+                mods = <(MOD_LSFT|MOD_RSFT)>; \
+            };
+
+        ZMK_MORPH_KHT(m_q, LT, Q)
+        ZMK_MORPH_KHT(m_w, GT, W)
+        ZMK_MORPH_KHT(m_e, LBKT, E)
+        ZMK_MORPH_KHT(m_r, RBKT, R)
+        ZMK_MORPH_KHT(m_y, TILDE, Y)
+        ZMK_MORPH_KHT(m_u, UNDER, U)
+        ZMK_MORPH_KHT(m_i, PLUS, I)
+        ZMK_MORPH_KHT(m_o, STAR, O)
+        ZMK_MORPH_KHT(m_p, PIPE, P)
+
+        ZMK_MORPH_KHT(m_a, LPAR, A)
+        ZMK_MORPH_KHT(m_s, RPAR, S)
+        ZMK_MORPH_KHT(m_d, LBRC, D)
+        ZMK_MORPH_KHT(m_f, RBRC, F)
+        ZMK_MORPH_KHT(m_h, GRAVE, H)
+        ZMK_MORPH_KHT(m_j, EQUAL, J)
+        ZMK_MORPH_KHT(m_k, MINUS, K)
+        ZMK_MORPH_KHT(m_l, SLASH, L)
+        ZMK_MORPH_KHT(m_semi, BSLH, SEMI)
     };
 
     combos {
@@ -64,8 +92,8 @@
         layer0 {
             bindings = <
 &kp GRAVE  &kp N1    &kp N2       &kp N3       &kp N4      &kp N5      &kp UP_ARROW      &kp N6     &kp N7     &kp N8     &kp N9    &kp N0       &kp BSPC
-&kp TAB    &kht LT Q &kht GT W    &kht LBKT E  &kht RBKT R &kp T       &kp DOWN_ARROW    &kht TILDE Y &kht UNDER U &kht PLUS I      &kht STAR O  &kht PIPE P        &lt 1 DEL
-&kp ESC    &kht LPAR A &kht RPAR S &kht LBRC D &kht RBRC F &kp G       &kp LEFT_ARROW    &kht GRAVE H &kht EQUAL J &kht MINUS K     &kht SLASH L &kht BSLH SEMI     &kp APOS
+&kp TAB    &m_q      &m_w         &m_e         &m_r        &kp T       &kp DOWN_ARROW    &m_y       &m_u       &m_i        &m_o       &m_p             &lt 1 DEL
+&kp ESC    &m_a      &m_s         &m_d         &m_f        &kp G       &kp LEFT_ARROW    &m_h       &m_j       &m_k        &m_l       &m_semi          &kp APOS
 &kp LSHFT  &kp Z     &kp X        &kp C        &kp V       &kp B       &kp RIGHT_ARROW   &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH     &kp RSHFT
 &kp C_MUTE &mo 2     &kp LALT     &kp LCTRL    &kp LGUI    &kp ENTER   &kp ENTER         &kp BSPC  &kp SPACE  &kp RCTRL  &kp RALT  &kp CAPS
             >;
