@@ -54,6 +54,7 @@
                 #binding-cells = <0>; \
                 bindings = <&kht HOLD TAP>, <&kp TAP>; \
                 mods = <(MOD_LSFT|MOD_RSFT)>; \
+                keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
             };
 
         ZMK_MORPH_KHT(m_q, LT, Q)
